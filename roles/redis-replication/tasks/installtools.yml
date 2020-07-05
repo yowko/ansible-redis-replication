@@ -10,11 +10,10 @@
 - include_tasks: checkdir.yml
   with_items: 
   - {folder: "/etc/redis"}
-  - {folder: "/data/redis"}
 
-# - name: Remove default redis service
-#   shell: |
-#     systemctl disable redis 
+- name: Remove default redis service
+  shell: |
+    systemctl disable redis 
 
 - name: Delete redis service
   file: 
